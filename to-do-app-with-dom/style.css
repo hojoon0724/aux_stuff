@@ -1,0 +1,98 @@
+:root {
+  --blue100: #c5daff;
+  --blue200: #a4b9dc;
+  --blue300: #879abc;
+  --blue400: #7184a5;
+  --blue500: #617494;
+  --blue600: #324360;
+  --blue700: #273855;
+  --blue800: #0c1b35;
+  --blue900: #00051c;
+}
+
+body {
+  background-color: var(--blue900);
+  color: var(--blue100);
+  box-sizing: border-box;
+  margin: 0;
+  /* border-collapse: collapse; */
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+div {
+  /* border: 1px solid red; */
+}
+
+.top-container {
+  max-width: 900px;
+  min-height: 100svh;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.to-do-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.to-do-box {
+  display: flex;
+  padding: 1ch;
+  border-bottom: 1px solid var(--blue400);
+}
+
+.to-do-box:first-child {
+  border-top: 1px solid var(--blue400);
+}
+
+.checkbox-div {
+  padding: 1ch;
+  min-width: 2ch;
+  text-align: center;
+}
+
+.order {
+  padding: 1ch;
+  min-width: 3ch;
+  text-align: center;
+}
+
+.textfield {
+  padding: 1ch 1ch;
+  width: auto;
+}
+
+.entry-container {
+  margin-bottom: 2ch;
+  display: flex;
+}
+
+.entry {
+  display: flex;
+  width: 10ch;
+  margin: 1ch;
+}
+
+#add {
+  height: 100%;
+}
+
+.entry-field {
+  padding: 1ch 0ch;
+  width: 100%;
+}
+
+.new-todo-field {
+  min-width: 100%;
+  height: 2ch;
+  /* border: 1px solid red; */
+  background-color: var(--blue800);
+  color: var(--blue100);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+}
