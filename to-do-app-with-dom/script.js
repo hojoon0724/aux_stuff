@@ -27,19 +27,33 @@ function initialTaskAdd() {
 function addNewToDo() {
   const newRow = document.createElement("div");
   const newCheckBox = document.createElement("div");
+  const newCheckBoxBox = document.createElement("input");
   const newOrder = document.createElement("div");
   const newTextField = document.createElement("div");
+  const editButton = document.createElement("button");
 
   newRow.className = "to-do-box";
   newCheckBox.className = "checkbox-div";
+  newCheckBoxBox.setAttribute("type", "checkbox");
   newOrder.className = "order";
   newTextField.className = "textfield";
-  newCheckBox.innerHTML = checkBoxBox;
+  editButton.id = "arrayNumber";
+  editButton.innerText = "Edit";
   newTextField.innerText = entryText.value;
   toDoContainer.append(newRow);
   newRow.append(newCheckBox);
+  newCheckBox.append(newCheckBoxBox);
   newRow.append(newOrder);
   newRow.append(newTextField);
+  newTextField.append(editButton);
+}
+
+function addTaskToDB() {
+  const newTaskObject = {
+    complete: false,
+    task: entryText.value,
+  };
+  toDoDatabase.push(newTaskObject);
 }
 
 function nextTaskIndex() {
@@ -51,7 +65,10 @@ const entryText = document.querySelector("#new-item");
 
 button.addEventListener("click", () => {
   addNewToDo();
+  addTaskToDB();
   console.log(entryText.value);
+  console.log(toDoDatabase);
+  console.log(nextTaskIndex());
 });
 
 console.log(entryText.value);
