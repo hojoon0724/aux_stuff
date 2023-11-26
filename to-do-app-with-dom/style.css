@@ -25,7 +25,7 @@ div {
 }
 
 .top-container {
-  max-width: 900px;
+  max-width: 700px;
   min-height: 100svh;
   margin: 0 auto;
 }
@@ -62,9 +62,11 @@ h1 {
   text-align: center;
 }
 
-.textfield {
+.tasktext {
   padding: 1ch 1ch;
-  width: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .entry-container {

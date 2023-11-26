@@ -111,10 +111,15 @@ function editTask(i) {
   targetTaskText.innerText = newText;
 }
 
-function getButtonID() {
+function getButtonID(i) {
   console.log(document.querySelector(`#tasktext-${i}`));
 }
 
 toDoDatabase.forEach((task) => {
   console.log(toDoDatabase.indexOf(task));
+});
+
+const editButtonPress = document.querySelectorAll(".edit-button");
+editButtonPress.forEach(function (current) {
+  current.addEventListener("click", console.log(`clicked${current}`));
 });
